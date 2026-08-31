@@ -1,0 +1,229 @@
+{
+  "site": {
+    "name": "cyberScan",
+    "heroTitle": "منصتك الشاملة في الأمن السيبراني",
+    "heroText": "أدوات متقدمة لفحص الروابط والبريد الإلكتروني وكلمات المرور، ومقالات تعليمية ودورات تدريبية لحمايتك وتطوير مهاراتك في الاختراق الأخلاقي والأمن السيبراني.",
+    "about": {
+      "name": "أحمد حمزة",
+      "title": "Cybersecurity & Penetration Testing",
+      "heroCaption": "المهندس أحمد حمزة — مختص في الأمن السيبراني واختبار الاختراق",
+      "bio": [
+        "خريج هندسة معلوماتية من جامعة الشام عام 2024، مهتم بمجال الأمن السيبراني واختبار الاختراق، مع تركيز على أمن تطبيقات الويب، أمن الشبكات، Linux، OSINT وتحليل الثغرات الأمنية.",
+        "أعمل على تحويل المعرفة النظرية والتقنية إلى أدوات ومشاريع عملية تساعد المستخدمين على فهم المخاطر الأمنية وحماية حساباتهم وأجهزتهم وبياناتهم، إلى جانب تقديم محتوى تعليمي وتوعوي في مجال الأمن السيبراني. تأتي منصة cyberScan كخطوة لدمج Scan · Learn · Protect في مكان واحد."
+      ],
+      "tags": [
+        "Penetration Testing",
+        "Web Security",
+        "Network Security",
+        "Linux",
+        "OSINT",
+        "Python"
+      ],
+      "education": "B.Sc. Information Engineering — Al‑Sham University, 2024",
+      "training": "OSCP · Network+ · Security+ · OSINT"
+    },
+    "contact": {
+      "title": "تواصل معي",
+      "text": "للاستفسارات، التعاون، أو اقتراح أفكار جديدة لمنصة cyberScan.",
+      "email": "example@mail.com",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/"
+    }
+  },
+  "articles": [
+    {
+      "id": "art-1",
+      "title": "ما هو التصيد الإلكتروني وكيف تحمي نفسك منه؟",
+      "excerpt": "مقدّمة شاملة حول مفهوم التصيد الإلكتروني، أشهر أساليبه، علامات الرسائل المزيفة، وخطوات بسيطة يمكنك اتباعها لاكتشاف محاولات الاحتيال قبل الوقوع فيها.",
+      "content": "التصيد الإلكتروني (Phishing) هو أسلوب هندسة اجتماعية يحاول فيه المهاجم خداعك للكشف عن بيانات حساسة مثل كلمات المرور أو أرقام البطاقات.\n\nغالباً ما تصل الرسالة من عنوان يبدو شرعياً، مع شعار معروف ونداء عاجل مثل «تحقق من حسابك خلال 24 ساعة». الهدف هو دفعك للنقر على رابط يفتح موقعاً مزيفاً يحاكي الخدمة الأصلية.\n\nللوقاية: لا تفتح الروابط من رسائل غير متوقعة، تحقق من عنوان المرسل والنطاق، فعّل المصادقة الثنائية، واستخدم أداة فحص الروابط في cyberScan قبل فتح أي رابط مشبوه.",
+      "tag": "Phishing",
+      "badge": "Phishing Basics",
+      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+      "readTime": "7 دقائق",
+      "level": "مبتدئ",
+      "published": true,
+      "featured": true,
+      "createdAt": "2024-08-01T10:00:00.000Z"
+    },
+    {
+      "id": "art-2",
+      "title": "أفضل طرق حماية حساباتك الشخصية من الاختراق",
+      "excerpt": "خطوات عملية لحماية الحسابات: كلمات مرور فريدة، مدير كلمات مرور، ومصادقة ثنائية.",
+      "content": "حماية الحسابات تبدأ بكلمة مرور طويلة وفريدة لكل خدمة، يفضّل توليدها وتخزينها في مدير كلمات مرور موثوق.\n\nفعّل المصادقة الثنائية (2FA) عبر تطبيق مصادقة وليس الرسائل النصية كلما أمكن. راقب جلسات تسجيل الدخول النشطة، وألغِ الأجهزة غير المعروفة.\n\nتجنّب إعادة استخدام كلمة المرور نفسها، ولا تدخل بياناتك في صفحات وصلت إليها من إعلان أو رسالة عاجلة.",
+      "tag": "Account Security",
+      "badge": "Account Security",
+      "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=800",
+      "readTime": "8 دقائق",
+      "level": "مبتدئ",
+      "published": true,
+      "featured": true,
+      "createdAt": "2024-08-05T10:00:00.000Z"
+    },
+    {
+      "id": "art-3",
+      "title": "تعرف على ثغرة XSS وكيف يتم استغلالها في الهجمات",
+      "excerpt": "شرح مبسّط لثغرة Cross-Site Scripting وكيف يحمي المطوّرون تطبيقاتهم منها.",
+      "content": "XSS تسمح للمهاجم بحقن سكربت في صفحة يراها مستخدمون آخرون. يمكن استخدامها لسرقة الجلسات أو تغيير محتوى الصفحة.\n\nالأنواع الشائعة: Stored و Reflected و DOM-based. الحماية تعتمد على ترميز المخرجات، Content Security Policy، وتجنّب إدخال HTML غير موثوق.\n\nللمطورين: عالج المدخلات حسب السياق (HTML, attribute, JS) ولا تعتمد على الفلترة السوداء وحدها.",
+      "tag": "Web Security",
+      "badge": "Web Security",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+      "readTime": "10 دقائق",
+      "level": "متوسط",
+      "published": true,
+      "featured": true,
+      "createdAt": "2024-08-10T10:00:00.000Z"
+    },
+    {
+      "id": "art-4",
+      "title": "أوامر Linux أساسية لكل مختبر اختراق في فريق Red Team",
+      "excerpt": "مجموعة أوامر يومية في الطرفية تساعدك على التنقل، جمع المعلومات، وتحليل الأنظمة.",
+      "content": "إتقان الطرفية أساس لأي مختبر اختراق. ابدأ بـ ls, cd, find, grep, ss/netstat, و journalctl لفهم النظام.\n\nللشبكات: ip, ping, traceroute, nmap (في نطاق مصرّح). لإدارة الصلاحيات: sudo, chmod, chown.\n\nوثّق أوامرك، واعمل دائماً ضمن نطاق قانوني وصلاحيات مكتوبة.",
+      "tag": "Linux",
+      "badge": "Linux",
+      "image": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800",
+      "readTime": "12 دقائق",
+      "level": "متوسط",
+      "published": true,
+      "featured": true,
+      "createdAt": "2024-08-15T10:00:00.000Z"
+    },
+    {
+      "id": "art-5",
+      "title": "التصيد الموجه Spear Phishing: لماذا هو أخطر من التصيد العشوائي؟",
+      "excerpt": "شرح لأسلوب التصيد الموجه نحو أشخاص أو شركات محددة وكيف يجمع المهاجم المعلومات عن الضحية.",
+      "content": "Spear phishing يستهدف شخصاً أو مؤسسة بعينها بعد جمع معلومات من LinkedIn والبريد والموقع الرسمي.\n\nالرسالة تبدو شخصية: اسمك، مشروعك، أو اسم مديرك. لذلك يصعب اكتشافها بفلاتر عامة.\n\nتحقق دائماً عبر قناة ثانية قبل تحويل أموال أو مشاركة بيانات، حتى لو بدت الرسالة من شخص تعرفه.",
+      "tag": "Phishing",
+      "badge": "Spear Phishing",
+      "image": "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&q=80&w=800",
+      "readTime": "10 دقائق",
+      "level": "متوسط",
+      "published": true,
+      "featured": false,
+      "createdAt": "2024-08-18T10:00:00.000Z"
+    },
+    {
+      "id": "art-6",
+      "title": "التصيد عبر الرسائل النصية والمكالمات: Smishing و Vishing",
+      "excerpt": "كيف تُستخدم الرسائل القصيرة والمكالمات لخداع الضحايا وكيفية التحقق من هوية المرسل.",
+      "content": "Smishing يصل عبر SMS برابط قصير، و Vishing عبر مكالمة تدّعي أنها من البنك أو الدعم.\n\nلا تعِد الاتصال على رقم وصل في الرسالة. استخدم الرقم الرسمي من تطبيق البنك أو الموقع.\n\nلا تشارك رموز OTP مع أي متصل، فالدعم الشرعي لن يطلبها.",
+      "tag": "Phishing",
+      "badge": "Smishing & Vishing",
+      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
+      "readTime": "8 دقائق",
+      "level": "مبتدئ",
+      "published": true,
+      "featured": false,
+      "createdAt": "2024-08-20T10:00:00.000Z"
+    },
+    {
+      "id": "art-7",
+      "title": "مواقع تسجيل دخول مزيفة: كيف تميّز الموقع الحقيقي من المقلّد؟",
+      "excerpt": "فحص عنوان الموقع، شهادة HTTPS، وشكل صفحة الدخول لكشف المواقع المزيّفة.",
+      "content": "الموقع المزيّف يقلّد الألوان والشعار لكنه يختلف في النطاق: حرف زائد، أو نطاق فرعي غريب.\n\nHTTPS وحده لا يعني الأمان؛ الشهادة تثبت التشفير لا هوية العلامة التجارية.\n\nاكتب عنوان الموقع يدوياً أو استخدم الإشارات المرجعية، وفعّل مفاتيح المرور Passkeys إن توفرت.",
+      "tag": "Phishing",
+      "badge": "Fake Websites",
+      "image": "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=800",
+      "readTime": "9 دقائق",
+      "level": "مبتدئ",
+      "published": true,
+      "featured": false,
+      "createdAt": "2024-08-22T10:00:00.000Z"
+    }
+  ],
+  "academy": [
+    {
+      "id": "lvl-1",
+      "level": "Level 1",
+      "title": "Cybersecurity Basics",
+      "image": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&q=80&w=400&h=220",
+      "progress": 60
+    },
+    {
+      "id": "lvl-2",
+      "level": "Level 2",
+      "title": "Networking & Linux",
+      "image": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=400",
+      "progress": 40
+    },
+    {
+      "id": "lvl-3",
+      "level": "Level 3",
+      "title": "Web Security & OWASP",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400",
+      "progress": 20
+    },
+    {
+      "id": "lvl-4",
+      "level": "Level 4",
+      "title": "Penetration Testing & Red Team",
+      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400",
+      "progress": 0
+    }
+  ],
+  "scans": [
+    {
+      "id": "scan-1788187378464",
+      "type": "url",
+      "target": "http:adfasf.comas",
+      "result": "Safe / Informational",
+      "risk": "low",
+      "date": "2026-08-31 14:42"
+    },
+    {
+      "id": "scan-1",
+      "type": "url",
+      "target": "http://update-security-check.com",
+      "result": "تصيد محتمل",
+      "risk": "high",
+      "date": "2024-09-01 14:32"
+    },
+    {
+      "id": "scan-2",
+      "type": "email",
+      "target": "admin@company.com",
+      "result": "تسريبين معروفين",
+      "risk": "medium",
+      "date": "2024-09-01 13:10"
+    },
+    {
+      "id": "scan-3",
+      "type": "pass",
+      "target": "********",
+      "result": "قوة ضعيفة",
+      "risk": "medium",
+      "date": "2024-09-01 12:05"
+    },
+    {
+      "id": "scan-4",
+      "type": "file",
+      "target": "invoice_2024.exe",
+      "result": "ملف تنفيذي مريب",
+      "risk": "high",
+      "date": "2024-08-31 22:17"
+    },
+    {
+      "id": "scan-5",
+      "type": "url",
+      "target": "https://docs.google.com/...",
+      "result": "آمن",
+      "risk": "low",
+      "date": "2024-08-31 20:45"
+    },
+    {
+      "id": "scan-6",
+      "type": "email",
+      "target": "user@proton.me",
+      "result": "لا توجد تسريبات معروفة",
+      "risk": "low",
+      "date": "2024-08-31 19:10"
+    },
+    {
+      "id": "scan-7",
+      "type": "url",
+      "target": "https://cyberscan.io",
+      "result": "آمن",
+      "risk": "low",
+      "date": "2024-08-31 18:01"
+    }
+  ]
+}

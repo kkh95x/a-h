@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cyberScan | منصة الأمن السيبراني</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- الهيدر -->
+  <header class="header">
+    <nav class="container nav">
+      <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <span>cyber<span>Scan</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#tools">الأدوات</a></li>
+        <li><a href="#articles">المقالات</a></li>
+        <li><a href="#academy">الأكاديمية</a></li>
+        <li><a href="#about">عني</a></li>
+        <li><a href="#contact">تواصل</a></li>
+      </ul>
+      <a href="login.html" class="btn-login-link">
+  <button class="btn-login" type="button">تسجيل الدخول</button>
+</a>
+    </nav>
+  </header>
+
+  <!-- الهيرو -->
+  <main id="home" class="hero container">
+    <section class="hero-content">
+      <h1>cyber<span>Scan</span></h1>
+      <h2>منصتك الشاملة في الأمن السيبراني</h2>
+      <p>
+        أدوات متقدمة لفحص الروابط والبريد الإلكتروني وكلمات المرور، ومقالات تعليمية
+        ودورات تدريبية لحمايتك وتطوير مهاراتك في الاختراق الأخلاقي والأمن السيبراني.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" data-scroll="#tools">ابدأ الآن</button>
+        <button class="btn-outline" data-scroll="#tools">استكشف الأدوات</button>
+      </div>
+    </section>
+
+   <section class="hero-image">
+  <div class="hero-image-inner">
+    <div class="photo-wrapper">
+      <img src="my-photo.png" alt="Cyber Security Specialist" />
+    </div>
+    <p class="hero-name-title">
+      المهندس أحمد حمزة — مختص في الأمن السيبراني واختبار الاختراق
+    </p>
+  </div>
+</section>
+  </main>
+
+  <!-- الأدوات -->
+  <section id="tools" class="features container">
+      <a href="url-scanner.html" class="feature-card feature-link">
+        <i class="fas fa-link icon-url"></i>
+           <h3>فحص الروابط</h3>
+              <p>تحليل الروابط واكتشاف الروابط الخبيثة والمشبوهة قبل فتحها.</p>
+      </a>
+      <a href="email-checker.html" class="feature-card feature-link">
+        <i class="fas fa-envelope-open-text icon-mail"></i>
+          <h3>فحص الإيميلات</h3>
+            <p>تحقق من تسريبات البريد الإلكتروني وكلمات المرور في قواعد البيانات المعروفة.</p>
+      </a>
+      <a href="password-strength.html" class="feature-card feature-link">
+        <i class="fas fa-key icon-pass"></i>
+         <h3>قياس قوة كلمة المرور</h3>
+          <p>تحليل قوة كلمات المرور وتقدير الوقت اللازم لكسرها بأساليب مختلفة.</p>
+      </a>
+      <a href="file-scanner.html" class="feature-card feature-link feature-soon">
+        <i class="fas fa-file-code icon-file"></i>
+          <h3>فحص الملفات <span class="soon">قريباً</span></h3>
+            <p>تحليل الملفات والبرمجيات للكشف عن الأنماط الخبيثة وسلوكيات الهجوم.</p>
+      </a>
+  </section>
+
+  <!-- المقالات -->
+  <section id="articles" class="articles container">
+    <div class="section-header">
+      <h3>أحدث المقالات</h3>
+      <a href="#" class="view-all">عرض الكل</a>
+    </div>
+    <div class="articles-grid">
+      <a href="phishing-articles.html" class="article-card article-link">
+        <div class="art-img">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400" alt="Phishing">
+        </div>
+           <h4>ما هو التصيد الإلكتروني وكيف تحمي نفسك منه؟</h4>
+          <span class="tag">Phishing</span>
+      </a>
+      <article class="article-card">
+        <div class="art-img">
+          <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=400" alt="Account Security">
+        </div>
+        <h4>أفضل طرق حماية حساباتك الشخصية من الاختراق</h4>
+        <span class="tag">Account Security</span>
+      </article>
+
+      <article class="article-card">
+        <div class="art-img">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400" alt="XSS">
+        </div>
+        <h4>تعرف على ثغرة XSS وكيف يتم استغلالها في الهجمات</h4>
+        <span class="tag">Web Security</span>
+      </article>
+
+      <article class="article-card">
+        <div class="art-img">
+          <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=400" alt="Linux">
+        </div>
+        <h4>أوامر Linux أساسية لكل مختبر اختراق في فريق Red Team</h4>
+        <span class="tag">Linux</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- الأكاديمية (قريباً) -->
+  <section id="academy" class="academy container">
+  <div class="section-header">
+    <h3>Cyber Academy <span class="soon">قريباً</span></h3>
+    <p>مستويات تدريبية من الأساسيات حتى الاحتراف في الاختراق الأخلاقي و Red Teaming.</p>
+  </div>
+  <div class="academy-grid">
+    <div class="academy-card">
+      <div class="academy-img">
+        <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&q=80&w=400&h=220" alt="Cybersecurity Basics" />
+      </div>
+      <h4>Level 1</h4>
+      <p>Cybersecurity Basics</p>
+    </div>
+    <div class="academy-card">
+      <div class="academy-img">
+        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=400" alt="Networking & Linux" />
+      </div>
+      <h4>Level 2</h4>
+      <p>Networking &amp; Linux</p>
+    </div>
+    <div class="academy-card">
+      <div class="academy-img">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400" alt="Web Security & OWASP" />
+      </div>
+      <h4>Level 3</h4>
+      <p>Web Security &amp; OWASP</p>
+    </div>
+    <div class="academy-card">
+      <div class="academy-img">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400" alt="Penetration Testing & Red Team" />
+      </div>
+      <h4>Level 4</h4>
+      <p>Penetration Testing &amp; Red Team</p>
+    </div>
+  </div>
+</section>
+
+
+   <main class="about-page container" id="about">
+    <section class="about-page-card">
+      <div class="about-page-photo">
+        <img src="my-photo.png" alt="Ahmed Hamza - Cybersecurity & Penetration Testing" />
+      </div>
+
+      <div class="about-page-text">
+        <span class="about-label">👨‍💻 الملف الشخصي</span>
+        <h1 class="about-name">أحمد حمزة</h1>
+        <p class="about-title">Cybersecurity &amp; Penetration Testing</p>
+
+        <p class="about-bio">
+          خريج هندسة معلوماتية من جامعة الشام عام 2024، مهتم بمجال الأمن السيبراني واختبار الاختراق،
+          مع تركيز على أمن تطبيقات الويب، أمن الشبكات، Linux، OSINT وتحليل الثغرات الأمنية.
+        </p>
+
+        <p class="about-bio">
+          أعمل على تحويل المعرفة النظرية والتقنية إلى أدوات ومشاريع عملية تساعد المستخدمين على فهم
+          المخاطر الأمنية وحماية حساباتهم وأجهزتهم وبياناتهم، إلى جانب تقديم محتوى تعليمي وتوعوي
+          في مجال الأمن السيبراني. تأتي منصة <span class="cs-inline">cyberScan</span> كخطوة لدمج
+          <strong>Scan · Learn · Protect</strong> في مكان واحد.
+        </p>
+
+        <div class="about-page-tags">
+          <span>Penetration Testing</span>
+          <span>Web Security</span>
+          <span>Network Security</span>
+          <span>Linux</span>
+          <span>OSINT</span>
+          <span>Python</span>
+        </div>
+
+        <div class="about-page-meta">
+          <div>
+            <span class="meta-label">Education</span>
+            <span class="meta-value">B.Sc. Information Engineering — Al‑Sham University, 2024</span>
+          </div>
+          <div>
+            <span class="meta-label">Training</span>
+            <span class="meta-value">OSCP · Network+ · Security+ ·  OSINT  </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- تواصل -->
+  <section id="contact" class="contact container">
+    <h3>تواصل معي</h3>
+    <p>للاستفسارات، التعاون، أو اقتراح أفكار جديدة لمنصة cyberScan.</p>
+    <div class="contact-links">
+      <a href="mailto:example@mail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- الفوتر -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2024 cyberScan. جميع الحقوق محفوظة.</p>
+      <p class="footer-slogan">Scan. Learn. Protect.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

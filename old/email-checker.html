@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فحص الإيميلات | cyberScan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="email-body">
+
+  <!-- هيدر -->
+  <header class="header">
+    <nav class="container nav">
+      <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <span>cyber<span>Scan</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">الرئيسية</a></li>
+        <li><a href="index.html#tools">الأدوات</a></li>
+        <li><a href="index.html#articles">المقالات</a></li>
+        <li><a href="index.html#academy">الأكاديمية</a></li>
+        <li><a href="index.html#certs">عني</a></li>
+        <li><a href="index.html#contact">تواصل</a></li>
+      </ul>
+      <a href="login.html" class="btn-login-link">
+        <button class="btn-login" type="button">تسجيل الدخول</button>
+      </a>
+    </nav>
+  </header>
+
+  <!-- محتوى فحص الإيميلات -->
+  <main class="email-wrapper">
+    <section class="email-card">
+      <div class="email-header">
+        <div class="email-icon">
+          <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <div>
+          <h1>فحص الإيميلات من التسريبات</h1>
+          <p>
+            أدخل بريدك الإلكتروني لمعرفة ما إذا كان قد ظهر في قواعد بيانات تسريبات كلمات المرور
+            المعروفة. لا نقوم بطلب أو تخزين كلمات المرور الخاصة بك.
+          </p>
+        </div>
+      </div>
+
+      <form class="email-form" id="emailForm">
+        <label for="emailInput">البريد الإلكتروني المراد فحصه</label>
+        <div class="email-input-wrapper">
+          <i class="fas fa-at"></i>
+          <input
+            type="email"
+            id="emailInput"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+          <button type="submit" class="btn-email-scan">
+            <i class="fas fa-search"></i> فحص البريد
+          </button>
+        </div>
+        <p class="email-hint">
+          هذه الأداة مخصّصة لفحص التسريبات المعروفة فقط. لا تدخل كلمات المرور هنا، ولا تشارك كلمة مرورك مع أي جهة.
+        </p>
+      </form>
+
+      <!-- نتيجة الفحص -->
+      <section id="emailResult" class="email-result email-result-hidden">
+        <h2>نتيجة الفحص</h2>
+
+        <div class="email-result-status">
+          <span id="emailRiskBadge" class="breach-badge breach-none">لا توجد تسريبات معروفة</span>
+          <span id="emailChecked"></span>
+        </div>
+
+        <ul class="email-result-list">
+          <li><span>عدد قواعد البيانات المتطابقة:</span> <strong id="breachCount">0</strong></li>
+          <li><span>تسريبات محتملة:</span> <strong id="breachSources">—</strong></li>
+          <li><span>توصية أمنية:</span> <strong id="securityAdvice">استمر في استخدام كلمات مرور قوية ومختلفة لكل حساب.</strong></li>
+        </ul>
+
+        <p class="email-note">
+          تنبيه: هذه النتيجة تجريبية (Frontend فقط). في النسخة الكاملة سيتم ربط الأداة مع
+          <span class="cs-inline">FastAPI</span> وواجهة برمجية خارجية موثوقة لفحص التسريبات،
+          بدون تخزين كلمات المرور أو إساءة استخدام بيانات المستخدمين.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2024 cyberScan. جميع الحقوق محفوظة.</p>
+      <p class="footer-slogan">Scan. Learn. Protect.</p>
+    </div>
+  </footer>
+
+  <script src="email-checker.js"></script>
+</body>
+</html>

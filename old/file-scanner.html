@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فحص الملفات | cyberScan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="file-body">
+
+  <!-- هيدر -->
+  <header class="header">
+    <nav class="container nav">
+      <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <span>cyber<span>Scan</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">الرئيسية</a></li>
+        <li><a href="index.html#tools">الأدوات</a></li>
+        <li><a href="index.html#articles">المقالات</a></li>
+        <li><a href="index.html#academy">الأكاديمية</a></li>
+        <li><a href="index.html#certs">عني</a></li>
+        <li><a href="index.html#contact">تواصل</a></li>
+      </ul>
+      <a href="login.html" class="btn-login-link">
+        <button class="btn-login" type="button">تسجيل الدخول</button>
+      </a>
+    </nav>
+  </header>
+
+  <!-- محتوى فحص الملفات -->
+  <main class="file-wrapper">
+    <section class="file-card">
+      <div class="file-header">
+        <div class="file-icon">
+          <i class="fas fa-file-code"></i>
+        </div>
+        <div>
+          <h1>فحص الملفات (نسخة تجريبية)</h1>
+          <p>
+            قم برفع ملف لتحليل نوعه وحجمه بشكل مبدئي. في النسخ القادمة سيتم فحص الملف
+            داخل بيئة معزولة (Sandbox) للكشف عن البرمجيات الخبيثة وسلوكيات الهجوم.
+          </p>
+        </div>
+      </div>
+
+      <form class="file-form" id="fileForm">
+        <label for="fileInput">اختر ملفاً للفحص</label>
+
+        <div class="file-dropzone" id="fileDropzone">
+          <input type="file" id="fileInput" name="file" />
+          <div class="file-dropzone-inner">
+            <i class="fas fa-upload"></i>
+            <p>اسحب الملف إلى هنا أو اضغط لاختياره</p>
+            <span class="file-types">
+              الصيغ المسموحة حالياً (تجريبياً): exe, apk, zip, pdf, docx, jpg, png
+            </span>
+          </div>
+        </div>
+
+        <p class="file-hint">
+          تنبيه: في هذه النسخة لا يتم رفع الملفات إلى الخادم، ويتم تحليل المعلومات محلياً في المتصفح فقط
+          (الاسم، الحجم، الامتداد، نوع الـ MIME إن توفر).
+        </p>
+
+        <button type="submit" class="btn-file-scan">
+          <i class="fas fa-shield-virus"></i> تحليل الملف
+        </button>
+      </form>
+
+      <!-- نتيجة الفحص -->
+      <section id="fileResult" class="file-result file-result-hidden">
+        <h2>معلومات الملف</h2>
+
+        <ul class="file-result-list">
+          <li><span>اسم الملف:</span> <strong id="fileName">—</strong></li>
+          <li><span>الحجم:</span> <strong id="fileSize">—</strong></li>
+          <li><span>الامتداد:</span> <strong id="fileExt">—</strong></li>
+          <li><span>نوع MIME (من المتصفح):</span> <strong id="fileMime">—</strong></li>
+        </ul>
+
+        <div class="file-risk-row">
+          <span>تقييم مبدئي للمخاطر:</span>
+          <span id="fileRiskBadge" class="file-risk-badge file-risk-medium">Unknown / Needs Deep Scan</span>
+        </div>
+
+        <p class="file-note">
+          هذه النتيجة لا تعني أن الملف آمن أو خبيث بشكل حاسم. في النسخة النهائية سيتم استخدام
+          <span class="cs-inline">Sandbox</span> و <span class="cs-inline">YARA</span> وفحص توقيعات
+          البرمجيات الخبيثة وقواعد بيانات السمعة لتقديم تقرير أدق.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2024 cyberScan. جميع الحقوق محفوظة.</p>
+      <p class="footer-slogan">Scan. Learn. Protect.</p>
+    </div>
+  </footer>
+
+  <script src="file-scanner.js"></script>
+</body>
+</html>

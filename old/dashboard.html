@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة التحكم | cyberScan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- استخدم style.css الرئيسي للموقع وضع فيه كود CSS الخاص بالداشبورد -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-body">
+
+  <div class="dash-layout">
+    <!-- الشريط الجانبي -->
+    <aside class="dash-sidebar">
+      <div class="dash-logo">
+        <i class="fas fa-shield-alt"></i>
+        <span>cyber<span>Scan</span></span>
+      </div>
+
+      <nav class="dash-nav">
+        <a href="#" class="dash-nav-item active" data-section="overview">
+          <i class="fas fa-home"></i>
+          <span>الرئيسية</span>
+        </a>
+        <a href="#" class="dash-nav-item" data-section="tools">
+          <i class="fas fa-tools"></i>
+          <span>أدوات الفحص</span>
+        </a>
+        <a href="#" class="dash-nav-item" data-section="history">
+          <i class="fas fa-history"></i>
+          <span>سجل الفحوصات</span>
+        </a>
+        <a href="#" class="dash-nav-item" data-section="articles">
+          <i class="fas fa-newspaper"></i>
+          <span>المقالات</span>
+        </a>
+        <a href="#" class="dash-nav-item" data-section="academy">
+          <i class="fas fa-graduation-cap"></i>
+          <span>الأكاديمية</span>
+        </a>
+        <a href="#" class="dash-nav-item" data-section="profile">
+          <i class="fas fa-user-shield"></i>
+          <span>الملف الشخصي</span>
+        </a>
+      </nav>
+
+      <div class="dash-sidebar-footer">
+        <a href="index.html" class="dash-back-link">
+          <i class="fas fa-arrow-right"></i>
+          العودة للموقع
+        </a>
+        <button class="dash-logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>تسجيل الخروج</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- محتوى اللوحة -->
+    <main class="dash-main">
+
+      <!-- قسم الرئيسية (Overview) -->
+      <section class="dash-section" data-section="overview">
+        <!-- الشريط العلوي -->
+        <header class="dash-topbar">
+          <div class="dash-top-left">
+            <h1>لوحة التحكم</h1>
+            <p>نظرة عامة سريعة على نشاط الفحوصات في cyberScan.</p>
+          </div>
+          <div class="dash-top-right">
+            <div class="dash-top-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span id="dashDate">اليوم</span>
+            </div>
+            <div class="dash-user">
+              <div class="dash-user-text">
+                <span class="dash-user-name">المهندس أحمد حمزة</span>
+                <span class="dash-user-role">Cybersecurity &amp; Penetration Testing</span>
+              </div>
+              <div class="dash-user-avatar">
+                <img src="my-photo.png" alt="Ahmed Hamza" />
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- كروت الإحصائيات -->
+        <section class="dash-stats">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon total">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-label">إجمالي الفحوصات</span>
+              <span class="dash-stat-value" id="statTotal">128</span>
+              <span class="dash-stat-sub">+12 خلال آخر 24 ساعة</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon url">
+              <i class="fas fa-link"></i>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-label">فحوصات الروابط</span>
+              <span class="dash-stat-value" id="statUrls">45</span>
+              <span class="dash-stat-sub">منها 6 خطِرة</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon email">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-label">فحوصات الإيميلات</span>
+              <span class="dash-stat-value" id="statEmails">32</span>
+              <span class="dash-stat-sub">8 إيميلات ظهرت في تسريبات</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon pass">
+              <i class="fas fa-key"></i>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-label">فحوصات كلمات المرور</span>
+              <span class="dash-stat-value" id="statPass">35</span>
+              <span class="dash-stat-sub">60% قوية أو متوسطة</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon file">
+              <i class="fas fa-file-code"></i>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-label">فحوصات الملفات</span>
+              <span class="dash-stat-value" id="statFiles">16</span>
+              <span class="dash-stat-sub">ميزة تحت التطوير</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- صف المخطط + آخر الفحوصات -->
+        <section class="dash-row">
+          <!-- مخطط تجريبي -->
+          <div class="dash-card dash-chart-card">
+            <div class="dash-card-header">
+              <h2>نشاط الفحوصات خلال الأسبوع</h2>
+              <span class="dash-card-sub">بيانات تجريبية (Frontend فقط)</span>
+            </div>
+            <div class="dash-chart-placeholder">
+              <div class="dash-chart-bars">
+                <div class="bar" style="height: 40%" title="السبت"></div>
+                <div class="bar" style="height: 60%" title="الأحد"></div>
+                <div class="bar" style="height: 80%" title="الاثنين"></div>
+                <div class="bar" style="height: 55%" title="الثلاثاء"></div>
+                <div class="bar" style="height: 70%" title="الأربعاء"></div>
+                <div class="bar" style="height: 45%" title="الخميس"></div>
+                <div class="bar" style="height: 30%" title="الجمعة"></div>
+              </div>
+              <div class="dash-chart-legend">
+                <span class="dot url"></span> روابط
+                <span class="dot email"></span> إيميلات
+                <span class="dot pass"></span> كلمات مرور
+              </div>
+            </div>
+          </div>
+
+          <!-- قائمة آخر الفحوصات -->
+          <div class="dash-card dash-recent-card">
+            <div class="dash-card-header">
+              <h2>أحدث الفحوصات</h2>
+              <span class="dash-card-sub">آخر عمليات الفحص التي قمت بها.</span>
+            </div>
+            <ul class="dash-recent-list" id="recentList">
+              <!-- من JS -->
+            </ul>
+          </div>
+        </section>
+
+        <!-- جدول تفصيلي مبسط -->
+        <section class="dash-card dash-table-card">
+          <div class="dash-card-header">
+            <h2>سجل الفحوصات (مختصر)</h2>
+            <span class="dash-card-sub">عرض لأهم المعلومات عن آخر الفحوصات.</span>
+          </div>
+
+          <div class="dash-table-wrapper">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>النوع</th>
+                  <th>الهدف</th>
+                  <th>النتيجة</th>
+                  <th>الخطر</th>
+                  <th>التاريخ</th>
+                </tr>
+              </thead>
+              <tbody id="scanTableBody">
+                <!-- من JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <!-- قسم أدوات الفحص -->
+      <section class="dash-section dash-tools-section dash-section-hidden" data-section="tools">
+        <div class="dash-topbar tools-topbar">
+          <div class="dash-top-left">
+            <h1>أدوات الفحص</h1>
+            <p>الوصول السريع إلى جميع أدوات cyberScan من داخل لوحة التحكم.</p>
+          </div>
+        </div>
+
+        <section class="dash-tools-grid">
+          <!-- URL Scanner -->
+          <article class="dash-tool-card">
+            <div class="dash-tool-icon url">
+              <i class="fas fa-link"></i>
+            </div>
+            <div class="dash-tool-body">
+              <h2>فحص الروابط</h2>
+              <p>
+                تحليل عناوين URL لاكتشاف الروابط الخبيثة أو صفحات التصيد قبل فتحها،
+                مع مؤشرات المخاطر وبيانات النطاق.
+              </p>
+              <div class="dash-tool-meta">
+                <span><i class="fas fa-bolt"></i> فحص سريع</span>
+                <span><i class="fas fa-shield-alt"></i> يحلل HTTPS و Domain</span>
+              </div>
+            </div>
+            <div class="dash-tool-footer">
+              <a href="url-scanner.html" class="dash-tool-btn primary">فتح أداة فحص الروابط</a>
+            </div>
+          </article>
+
+          <!-- Email Breach -->
+          <article class="dash-tool-card">
+            <div class="dash-tool-icon email">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <div class="dash-tool-body">
+              <h2>فحص الإيميلات من التسريبات</h2>
+              <p>
+                التحقق من ظهور بريدك الإلكتروني في قواعد بيانات تسريبات كلمات المرور
+                دون طلب كلمة المرور أو تخزينها.
+              </p>
+              <div class="dash-tool-meta">
+                <span><i class="fas fa-database"></i> قواعد بيانات تسريب</span>
+                <span><i class="fas fa-user-lock"></i> خصوصية عالية</span>
+              </div>
+            </div>
+            <div class="dash-tool-footer">
+              <a href="email-checker.html" class="dash-tool-btn primary">فتح أداة فحص الإيميلات</a>
+            </div>
+          </article>
+
+          <!-- Password Strength -->
+          <article class="dash-tool-card">
+            <div class="dash-tool-icon pass">
+              <i class="fas fa-key"></i>
+            </div>
+            <div class="dash-tool-body">
+              <h2>قياس قوة كلمة المرور</h2>
+              <p>
+                تحليل قوة كلمة المرور محلياً في المتصفح، مع تقدير لزمن الكسر ونصائح
+                لتحسين التعقيد والطول.
+              </p>
+              <div class="dash-tool-meta">
+                <span><i class="fas fa-lock"></i> الفحص محلي 100%</span>
+                <span><i class="fas fa-tachometer-alt"></i> مقياس قوة فوري</span>
+              </div>
+            </div>
+            <div class="dash-tool-footer">
+              <a href="password-strength.html" class="dash-tool-btn primary">فتح أداة قياس القوة</a>
+            </div>
+          </article>
+
+          <!-- File Scanner -->
+          <article class="dash-tool-card">
+            <div class="dash-tool-icon file">
+              <i class="fas fa-file-code"></i>
+            </div>
+            <div class="dash-tool-body">
+              <h2>فحص الملفات</h2>
+              <p>
+                رفع ملف للحصول على تحليل مبدئي لنوعه وحجمه وامتداده، مع تقييم مخاطر
+                أولي قبل الفحص العميق في Sandbox (قريباً).
+              </p>
+              <div class="dash-tool-meta">
+                <span><i class="fas fa-flask"></i> Sandbox (قريباً)</span>
+                <span><i class="fas fa-exclamation-triangle"></i> تحليل تجريبي</span>
+              </div>
+            </div>
+            <div class="dash-tool-footer">
+              <a href="file-scanner.html" class="dash-tool-btn secondary">فتح أداة فحص الملفات</a>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <!-- قسم سجل الفحوصات الكامل -->
+      <section class="dash-section dash-section-hidden" data-section="history">
+        <header class="dash-topbar">
+          <div class="dash-top-left">
+            <h1>سجل الفحوصات</h1>
+            <p>عرض مفصّل لجميع الفحوصات التي تم تنفيذها من حسابك.</p>
+          </div>
+        </header>
+
+        <section class="dash-card">
+          <div class="dash-card-header">
+            <h2>كل الفحوصات</h2>
+            <span class="dash-card-sub">البيانات حالياً تجريبية – سيتم ربطها بقاعدة البيانات لاحقاً.</span>
+          </div>
+
+          <div class="dash-history-filters">
+            <select id="historyTypeFilter">
+              <option value="all">كل الأنواع</option>
+              <option value="url">روابط</option>
+              <option value="email">إيميلات</option>
+              <option value="pass">كلمات مرور</option>
+              <option value="file">ملفات</option>
+            </select>
+            <select id="historyRiskFilter">
+              <option value="all">كل مستويات الخطر</option>
+              <option value="low">منخفض</option>
+              <option value="medium">متوسط</option>
+              <option value="high">عالٍ</option>
+            </select>
+          </div>
+
+          <div class="dash-table-wrapper">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>النوع</th>
+                  <th>الهدف</th>
+                  <th>النتيجة</th>
+                  <th>الخطر</th>
+                  <th>التاريخ</th>
+                </tr>
+              </thead>
+              <tbody id="historyTableBody">
+                <!-- من JS مع فلاتر -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <!-- قسم المقالات داخل الداشبورد -->
+      <section class="dash-section dash-section-hidden" data-section="articles">
+        <header class="dash-topbar">
+          <div class="dash-top-left">
+            <h1>إدارة المقالات</h1>
+            <p>عرض مختصر لأحدث المقالات المنشورة على cyberScan.</p>
+          </div>
+        </header>
+
+        <section class="dash-card">
+          <div class="dash-card-header">
+            <h2>أحدث المقالات</h2>
+            <span class="dash-card-sub">مقالات تجريبية (يمكن ربطها لاحقاً بقاعدة بيانات).</span>
+          </div>
+
+          <div class="dash-articles-grid" id="dashArticlesGrid">
+            <!-- من JS -->
+          </div>
+        </section>
+      </section>
+
+      <!-- قسم الأكاديمية -->
+      <section class="dash-section dash-section-hidden" data-section="academy">
+        <header class="dash-topbar">
+          <div class="dash-top-left">
+            <h1>Cyber Academy</h1>
+            <p>متابعة التقدم في مستويات الأكاديمية والدورات التدريبية.</p>
+          </div>
+        </header>
+
+        <section class="dash-card">
+          <div class="dash-card-header">
+            <h2>مستويات التدريب</h2>
+            <span class="dash-card-sub">النظام تجريبي – سيتم ربطه بالدورات الحقيقية لاحقاً.</span>
+          </div>
+
+          <div class="dash-academy-grid" id="academyGrid">
+            <!-- من JS -->
+          </div>
+        </section>
+      </section>
+
+      <!-- قسم الملف الشخصي -->
+      <section class="dash-section dash-section-hidden" data-section="profile">
+        <header class="dash-topbar">
+          <div class="dash-top-left">
+            <h1>الملف الشخصي</h1>
+            <p>معلومات حسابك في cyberScan وإعدادات الحساب الأساسية.</p>
+          </div>
+        </header>
+
+        <section class="dash-profile-layout">
+          <div class="dash-card dash-profile-main">
+            <div class="dash-profile-header">
+              <div class="dash-profile-avatar">
+                <img src="my-photo.png" alt="Ahmed Hamza" />
+              </div>
+              <div>
+                <h2>المهندس أحمد حمزة</h2>
+                <p>Cybersecurity &amp; Penetration Testing</p>
+                <span class="dash-badge safe">حساب موثق</span>
+              </div>
+            </div>
+
+            <div class="dash-profile-info">
+              <div>
+                <span class="label">البريد الإلكتروني</span>
+                <span class="value">admin@cyberscan.com</span>
+              </div>
+              <div>
+                <span class="label">الدور</span>
+                <span class="value">Owner / Admin</span>
+              </div>
+              <div>
+                <span class="label">تاريخ إنشاء الحساب</span>
+                <span class="value">2024-01-01</span>
+              </div>
+              <div>
+                <span class="label">آخر تسجيل دخول</span>
+                <span class="value" id="lastLoginValue">اليوم</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card dash-profile-side">
+            <h3>إعدادات سريعة</h3>
+            <ul class="dash-profile-actions">
+              <li><i class="fas fa-key"></i> تغيير كلمة المرور (قريباً)</li>
+              <li><i class="fas fa-user-lock"></i> تفعيل المصادقة الثنائية 2FA (قريباً)</li>
+              <li><i class="fas fa-bell"></i> إعدادات التنبيهات (قريباً)</li>
+            </ul>
+            <p class="dash-profile-note">
+              هذه الصفحة تجريبية لعرض شكل ملف المستخدم، وسيتم ربطها لاحقاً بنظام
+              الحسابات وقاعدة البيانات وواجهة الإدارة.
+            </p>
+          </div>
+        </section>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

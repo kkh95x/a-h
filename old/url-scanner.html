@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فحص الروابط | cyberScan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="url-body">
+
+  <!-- هيدر بسيط -->
+  <header class="header">
+    <nav class="container nav">
+      <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <span>cyber<span>Scan</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">الرئيسية</a></li>
+        <li><a href="index.html#tools">الأدوات</a></li>
+        <li><a href="index.html#articles">المقالات</a></li>
+        <li><a href="index.html#academy">الأكاديمية</a></li>
+        <li><a href="index.html#certs">عني</a></li>
+        <li><a href="index.html#contact">تواصل</a></li>
+      </ul>
+      <a href="login.html" class="btn-login-link">
+        <button class="btn-login" type="button">تسجيل الدخول</button>
+      </a>
+    </nav>
+  </header>
+
+  <!-- محتوى صفحة فحص الروابط -->
+  <main class="url-wrapper">
+    <section class="url-card">
+      <div class="url-header">
+        <div class="url-icon">
+          <i class="fas fa-link"></i>
+        </div>
+        <div>
+          <h1>أداة فحص الروابط</h1>
+          <p>
+            أدخل الرابط الذي تريد فحصه، وسنقوم بتحليله لاكتشاف الروابط الخبيثة أو المشبوهة
+            قبل أن تقوم بفتحه.
+          </p>
+        </div>
+      </div>
+
+      <form class="url-form" id="urlForm">
+        <label for="urlInput">الرابط المراد فحصه</label>
+        <div class="url-input-wrapper">
+          <i class="fas fa-globe"></i>
+          <input
+            type="url"
+            id="urlInput"
+            name="url"
+            placeholder="https://example.com/malicious-link"
+            required
+          />
+          <button type="submit" class="btn-url-scan">
+            <i class="fas fa-search"></i> فحص الرابط
+          </button>
+        </div>
+        <p class="url-hint">
+          لا تقم بإدخال كلمات مرور أو بيانات حساسة في هذه الخانة، فقط عنوان الرابط (URL) المراد تحليله.
+        </p>
+      </form>
+
+      <!-- نتيجة الفحص -->
+      <section id="urlResult" class="url-result url-result-hidden">
+        <h2>نتيجة الفحص</h2>
+        <div class="url-result-status">
+          <span id="urlRiskBadge" class="risk-badge risk-low">LOW RISK</span>
+          <span id="urlDomain"></span>
+        </div>
+        <ul class="url-result-list">
+          <li><span>تصنيف الرابط:</span> <strong id="urlCategory">Safe / Informational</strong></li>
+          <li><span>نوع البروتوكول:</span> <strong id="urlScheme">https</strong></li>
+          <li><span>استخدام HTTPS:</span> <strong id="urlHttps">نعم</strong></li>
+          <li><span>مؤشرات التصيد:</span> <strong id="urlPhishing">منخفضة</strong></li>
+        </ul>
+        <p class="url-note">
+          ملاحظة: هذه مجرد نتيجة تجريبية (Frontend Mock). سيتم ربط الأداة مع
+          <span class="cs-inline">FastAPI</span> وخدمات فحص حقيقية في المراحل القادمة.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2024 cyberScan. جميع الحقوق محفوظة.</p>
+      <p class="footer-slogan">Scan. Learn. Protect.</p>
+    </div>
+  </footer>
+
+  <script src="url-scanner.js"></script>
+</body>
+</html>
